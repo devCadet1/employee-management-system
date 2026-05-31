@@ -24,7 +24,7 @@ public class Main {
 		Employee employee = repository.findEmployeeById(101);
 		System.out.println(employee);
 		
-		Employee emp = repository.findEmployeeByName("mansi");
+		Employee emp = repository.findEmployeeByName("Mansi");
 		System.out.println(emp);
 		
 		

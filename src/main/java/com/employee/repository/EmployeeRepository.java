@@ -27,7 +27,7 @@ public class EmployeeRepository {
 	
 	public Employee findEmployeeByName(String name) {
 		for (Employee employee : employees) {
-			if (employee.getName() == name) {
+			if (employee.getName().equalsIgnoreCase(name)) {
 				return employee;
 			}
 		}
