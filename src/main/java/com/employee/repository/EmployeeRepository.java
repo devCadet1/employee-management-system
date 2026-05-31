@@ -15,6 +15,7 @@ public class EmployeeRepository {
 		return employees;
 	}
 	
+	// method to find employee by ID 
 	public Employee findEmployeeById(int id) {
 		for (Employee employee : employees) {
 			if (employee.getId() == id) {
@@ -25,6 +26,7 @@ public class EmployeeRepository {
 		return null;
 	}
 	
+	// Method to find employee by name
 	public Employee findEmployeeByName(String name) {
 		for (Employee employee : employees) {
 			if (employee.getName().equalsIgnoreCase(name)) {
@@ -32,5 +34,10 @@ public class EmployeeRepository {
 			}
 		}
 		return null;
+	}
+	
+	// Method to delete an employee 
+	public boolean deleteEmployee(int id) {
+		return employees.removeIf( employee -> employee.getId() == id);
 	}
 }

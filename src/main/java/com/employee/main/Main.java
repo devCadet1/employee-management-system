@@ -21,11 +21,19 @@ public class Main {
 		
 //		System.out.println(repository.getAllEmployees());
 		
-		Employee employee = repository.findEmployeeById(101);
-		System.out.println(employee);
-		
+		// find employee by name
 		Employee emp = repository.findEmployeeByName("Mansi");
 		System.out.println(emp);
+		
+		// Delete employee method from Employee repository
+		boolean deleted = repository.deleteEmployee(102);
+		System.out.println(deleted);
+		
+		System.out.println(repository.getAllEmployees());
+		
+		// find employee by ID
+		Employee employee = repository.findEmployeeById(102);
+		System.out.println(employee);
 		
 		
 		
